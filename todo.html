@@ -1,0 +1,22 @@
+<head>
+  <title> Cosas por hacer </title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1> Lista de tareas pendientes </h1>
+    </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+        {{/each}}
+    </ul>
+  </div>
+
+</body>
+
+<template name="task">
+  <li> {{text}} </li>
+</template>
