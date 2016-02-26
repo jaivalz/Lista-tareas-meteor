@@ -5,11 +5,22 @@
 <body>
   <div class="container">
     <header>
-      <h1> Lista de tareas pendientes </h1>
+      <h1> Lista de tareas pendientes, tienes {{incompleteCount}} tareas restantes </h1>
 
+      <label class="hide-completed">
+        <input type="checkbox" checked="hiddeCompleted}}" />
+         <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+        Ocultar tareas completadas
+      </label>
+
+      {{> loginButtons}}
+
+      {{#if currentUser}}
       <form class="new-task">
         <input type="text" name="text" placeholder="Nueva tarea"/>
       </form>
+      {{/if}}
+
     </header>
 
     <ul>
